@@ -381,7 +381,8 @@
                 || !!('onmsgesturechange' in window); // works on ie10
         },
         children: function(el) {
-            return el.children().get(0).tagName;
+            if ( el.children().get(0) !== undefined )
+                return el.children().get(0).tagName;
         }
     };
 
